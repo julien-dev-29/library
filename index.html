@@ -9,6 +9,29 @@
 </head>
 
 <body>
+    <header class="header">
+        <h1>Librairie</h1>
+    </header>
+    <main class="main">
+        <h1>Liste des livres</h1>
+        <div class="btn-container">
+            <dialog>
+                <button class="btn error" autofocus>Close</button>
+                <form class="form" id="form">
+                    <label for="title">Titre</label>
+                    <input type="text" id="title" name="title">
+                    <label for="author">Auteur</label>
+                    <input type="text" id="author" name="author">
+                    <label for="pages">Nombre de pages</label>
+                    <input type="number" id="pages" name="pages">
+                    <button type="submit" class="btn" id="add-book-btn">Ajouter</button>
+                </form>
+            </dialog>
+            <button class="btn">Add A Book</button>
+        </div>
+        <div id="display"></div>
+    </main>
+    <footer class="footer"></footer>
     <script src="script.js"></script>
 </body>
 
