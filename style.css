@@ -1,8 +1,13 @@
 @import url(normalize.css);
 @import url(colors.css);
 
+@font-face {
+  font-family: "demon";
+  src: url(fonts/DemonRushRegular-e9glB.ttf);
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "demon";
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -47,7 +52,7 @@ body {
 
 .card:hover {
   border: 1px solid transparent;
-  outline: 2px solid #ACD8FC;
+  outline: 2px solid #acd8fc;
 }
 
 .btn-container {
@@ -86,7 +91,7 @@ body {
 }
 
 .btn:active {
-  background-color: #00a2c7;
+  transform: translateY(0.5px);
 }
 
 dialog > form {
@@ -98,9 +103,13 @@ dialog > form > input {
   border: none;
   margin-top: 8px;
   padding: 6px;
-  border-radius: 5px;
+  border-radius: 3px;
   outline: 1px solid var(--gray-5);
   background-color: var(--gray-2);
+}
+
+dialog > form > input:invalid {
+  box-shadow: 0 0 5px 1px #e5484d;
 }
 
 dialog > form > input:focus {

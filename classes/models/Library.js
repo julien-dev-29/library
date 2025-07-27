@@ -19,7 +19,11 @@ export class Library {
      */
     addBookToLibrary(form) {
         const data = new FormData(form)
-        this.#myLibrary.push(new Book(data.get('title'), data.get('author'), data.get('pages'), false))
+        this.#myLibrary.push(new Book(
+            data.get('title'),
+            data.get('author'),
+            data.get('pages'), false
+        ))
     }
     /**
      * 
@@ -35,7 +39,7 @@ export class Library {
      * @param {String} id 
      */
     updateBook(id) {
-        this.#myLibrary.map(function(book) {
+        this.#myLibrary.map(function (book) {
             if (book.id === id) {
                 book.toggleRead()
             }

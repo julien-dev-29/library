@@ -10,7 +10,7 @@ export class Modal {
         this.screenController = screenController
         this.dialogElem = document.getElementById("dialog");
         this.showBtn = document.querySelector(".show");
-        this.closeBtn = document.querySelector(".close");
+        this.closeBtn = document.querySelector("#close-dialog");
         this.showBtn.addEventListener("click", () => {
             this.dialogElem.showModal();
         });
@@ -23,6 +23,7 @@ export class Modal {
             this.library.addBookToLibrary(e.target)
             this.screenController.displayLibrary()
             e.target.reset()
+            e.target.parentElement.close()
         })
     }
     handleSubmit() {
