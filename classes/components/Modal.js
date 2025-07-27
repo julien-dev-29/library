@@ -48,9 +48,6 @@ export class Modal {
             e.target.parentElement.close()
         })
     }
-    handleSubmit() {
-
-    }
     get form() {
         return this.#form
     }
