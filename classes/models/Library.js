@@ -5,8 +5,8 @@ import { Book } from "./Book.js";
 export class Library {
     #myLibrary = []
     constructor(screenController) {
-        this.#myLibrary.push(new Book("titre", "auteur", 254, false))
-        this.#myLibrary.push(new Book("titre2", "auteur2", 784, false))
+        this.#myLibrary.push(new Book("H2G2", "Douglas Adams", 286, false))
+        this.#myLibrary.push(new Book("Neuromancien", "William Gibson", 489, false))
         this.#myLibrary.push(new Book("titre3", "auteur3", 584, false))
         this.screenController = screenController
     }

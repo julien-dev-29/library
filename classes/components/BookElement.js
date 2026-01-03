@@ -7,6 +7,7 @@ export default class BookElement {
         this.#element.classList.add('card')
         const title = document.createElement('h2')
         const author = document.createElement('h3')
+        const pages = document.createElement('h4')
         const readElement = document.createElement('p')
         const btnElement = document.createElement('div')
         if (book.read === true) {
@@ -29,8 +30,10 @@ export default class BookElement {
         })
         author.textContent = book.author
         title.textContent = book.title
+        pages.textContent = book.pages + " pages"
         this.#element.append(title)
         this.#element.append(author)
+        this.#element.append(pages)
         this.#element.append(readElement)
         btnElement.append(deleteBtn)
         btnElement.append(readBtn)
